@@ -1,0 +1,39 @@
+.logout-card {
+  background-color: var(--color-dark--1);
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  border-radius: 0.8rem;
+  color: #fff;
+  box-shadow: 0 1rem 3rem var(--color-dark--1);
+  z-index: 999;
+  margin-top: 2rem;
+  margin-right: 2rem;
+}
+.logout-card > figure {
+  /* width: 3rem; */
+  height: 4.5rem;
+}
+.logout-card > figure > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.logout-card h4 {
+  font-size: 1.35rem;
+}
+.logout-card button {
+  font-family: inherit;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-dark--2);
+  color: #fff;
+  border: none;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 600;
+}

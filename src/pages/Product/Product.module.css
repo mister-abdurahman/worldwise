@@ -1,0 +1,38 @@
+.product {
+  height: calc(100vh - 5rem);
+  margin: 2.5rem;
+  padding: 2.5rem 5rem;
+  background-color: var(--color-dark--1);
+}
+.product > main {
+  display: flex;
+  height: 15rem;
+  justify-content: center;
+  margin: 2.5rem auto;
+  /* margin-top: 4rem; */
+  gap: 8rem;
+  padding: 4rem 8rem;
+}
+.product figure {
+  /* width: 50%; */
+  flex: 1;
+}
+.product figure img {
+  display: inline-block;
+  width: 100%;
+  padding: 5rem;
+  /* aspect-ratio: 1/1; */
+  /* height: 100%; */
+}
+.product div {
+  flex: 1;
+  align-self: baseline;
+  margin-top: 2rem;
+}
+.product main div h1 {
+  font-size: 5rem;
+  font-weight: 700;
+}
+.product main div p {
+  font-size: 2rem;
+}

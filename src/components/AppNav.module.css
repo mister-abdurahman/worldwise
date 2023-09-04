@@ -1,0 +1,25 @@
+.nav {
+}
+.nav > ul {
+  display: flex;
+  /* justify-content: center; */
+  margin: 3rem auto;
+}
+.nav > ul > li {
+  /* background-color: var(--color-light--1); */
+  list-style: none;
+}
+.nav > ul > li > a:link,
+.nav > ul > li > a:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 1rem 3rem;
+  background-color: var(--color-dark--2);
+  padding: 0.8rem 2rem;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.nav > ul > li > a:global(.active) {
+  background-color: var(--color-dark--0);
+}

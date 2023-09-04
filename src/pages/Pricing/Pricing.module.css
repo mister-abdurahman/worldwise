@@ -1,0 +1,45 @@
+.pricing {
+  height: calc(100vh - 5rem);
+  margin: 2.5rem;
+  padding: 2.5rem 5rem;
+  background-color: var(--color-dark--1);
+}
+
+.pricing section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pricing main {
+  display: flex;
+  margin: 2.5rem auto;
+  align-items: center;
+  justify-content: center;
+  /* margin-top: 4rem; */
+  gap: 8rem;
+  padding: 2rem 8rem;
+}
+.pricing figure {
+  /* width: 50%; */
+  flex: 1;
+}
+.pricing figure img {
+  display: inline-block;
+  width: 100%;
+  padding: 4rem;
+  /* aspect-ratio: 1/1; */
+  /* height: 100%; */
+}
+.pricing div {
+  flex: 1;
+  align-self: center;
+}
+.pricing main div h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.pricing main div p {
+  font-size: 2rem;
+}

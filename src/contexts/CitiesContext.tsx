@@ -1,4 +1,10 @@
-import React, { createContext, useContext, useEffect, useReducer } from "react";
+import React, {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useReducer,
+} from "react";
 
 interface cityType {
   cityName: string;
@@ -90,23 +96,27 @@ function CitiesProvider({ children }: any) {
     fetchCities();
   }, []);
 
-  async function getCity(id: string) {
-    try {
-      if (Number(id) === currentCity.id) return; //dont fetch if already the selected city
-      dispatch({ type: "setLoading", payload: true });
-      dispatch({ type: "setError", payload: "" });
-      const res = await fetch(`${BASE_URL}/cities/${id}`);
-      const resJSON = await res.json();
-      if (!res.ok) throw new Error((resJSON && resJSON.message) || res.status);
-      dispatch({ type: "setCurrentCity", payload: resJSON });
-    } catch (error: any) {
-      dispatch({ type: "setError", payload: error });
-      alert("There was an error loading data...");
-    } finally {
-      // setIsLoading(false);
-      dispatch({ type: "setLoading", payload: false });
-    }
-  }
+  const getCity = useCallback(
+    async function getCity(id: string) {
+      try {
+        if (Number(id) === currentCity.id) return; //dont fetch if already the selected city
+        dispatch({ type: "setLoading", payload: true });
+        dispatch({ type: "setError", payload: "" });
+        const res = await fetch(`${BASE_URL}/cities/${id}`);
+        const resJSON = await res.json();
+        if (!res.ok)
+          throw new Error((resJSON && resJSON.message) || res.status);
+        dispatch({ type: "setCurrentCity", payload: resJSON });
+      } catch (error: any) {
+        dispatch({ type: "setError", payload: error });
+        alert("There was an error loading data...");
+      } finally {
+        // setIsLoading(false);
+        dispatch({ type: "setLoading", payload: false });
+      }
+    },
+    [currentCity.id]
+  );
 
   // save new city to Fake API
   async function createCity(newCity: cityType) {

@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import Button from "../../components/Button";
 import NavBar from "../../components/NavBar";
-import styles from "./Homepage.module.css";
+import styles from "./HomePage.module.css";
 
 export default function Homepage() {
   return (

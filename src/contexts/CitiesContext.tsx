@@ -24,7 +24,8 @@ interface initialDataType {
   currentCity: string;
 }
 
-export const BASE_URL = `http://localhost:8000`;
+// export const BASE_URL = `http://localhost:8000`;
+export const BASE_URL = `https://worldwise-server.vercel.app`;
 
 const citiesContext = createContext({});
 

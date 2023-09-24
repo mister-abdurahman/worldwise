@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useCallback } from "react";
 import { NavLink, useParams } from "react-router-dom";
 import { useCities } from "../contexts/CitiesContext";
 import styles from "./City.module.css";
@@ -10,11 +10,17 @@ export default function City() {
   const { id } = useParams();
   const { getCity }: any = useCities();
 
-  useEffect(
+  // useEffect(
+  //   function () {
+  //     getCity(id);
+  //   },
+  //   [id]
+  // );
+  useCallback(
     function () {
       getCity(id);
     },
-    [id]
+    [id, getCity]
   );
   const { currentCity, isLoading }: any = useCities();
   const { cityName, emoji, date, notes } = currentCity;

@@ -28,6 +28,10 @@ export default function Map() {
     getPosition,
   } = useGeoLocation();
 
+  const mapProps: any = {
+    center: mapPosition,
+  };
+
   useEffect(
     function () {
       if (mapLat && mapLng) setMapPosition([mapLat, mapLng]);
@@ -53,11 +57,18 @@ export default function Map() {
       )}
       <User />
       <MapContainer
+        {...mapProps}
+        className={styles.map}
+        // center={mapPosition} //default position
+        zoom={6}
+        scrollWheelZoom={true}
+      >
+        {/* <MapContainer
         className={styles.map}
         center={mapPosition} //default position
         zoom={6}
         scrollWheelZoom={true}
-      >
+      > */}
         <TileLayer
           // attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"

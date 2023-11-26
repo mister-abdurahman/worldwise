@@ -2,7 +2,7 @@
   background-color: var(--color-dark--2);
   font-size: 1.4rem;
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   align-items: center;
   min-width: 40rem;
   border-radius: 0.5rem;
@@ -37,4 +37,14 @@ li {
 .deleteBtn:hover {
   background-color: var(--color-brand--1);
   color: var(--color-dark--1);
+}
+.flex {
+  display: flex;
+}
+@media screen and (max-width: 1350px) {
+  .cityItem {
+    flex-direction: column;
+    min-width: max-content;
+    padding: 0.5rem 1.5rem;
+  }
 }

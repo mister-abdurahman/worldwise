@@ -66,3 +66,25 @@
   font-family: inherit;
   font-size: 1.2rem;
 }
+@media screen and (max-width: 720px) {
+  .form {
+    margin-top: 4rem;
+    font-size: 0.8rem;
+    gap: 1;
+    padding: 1rem 2rem;
+  }
+  .row {
+    gap: 0;
+  }
+  .row > textarea,
+  .row input {
+    padding: 0.5rem;
+  }
+  .row > textarea:focus,
+  .row input:focus {
+    padding: 0.5rem;
+  }
+  :global(.react-datepicker) {
+    font-size: 1rem;
+  }
+}

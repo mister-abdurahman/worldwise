@@ -8,8 +8,12 @@ import { Outlet } from "react-router-dom";
 export default function Sidebar() {
   return (
     <div className={styles.sidebar}>
-      <Logo />
-      <AppNav />
+      <span className={styles.mobile_applayout_logo}>
+        <Logo />
+      </span>
+      <span className={styles.mobile_applayout_appnav}>
+        <AppNav />
+      </span>
       <Outlet />
       <Footer />
     </div>

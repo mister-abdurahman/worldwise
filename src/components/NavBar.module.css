@@ -2,13 +2,77 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
-.nav ul {
+.nav_content {
   list-style: none;
   display: flex;
   align-items: center;
   gap: 4rem;
+}
+.hamburger {
+  display: none;
+  background-color: var(--color-brand--2);
+  fill: aliceblue;
+  height: 4rem;
+  width: 4rem;
+  padding: 0.6rem;
+  border-radius: 0.8rem;
+}
+.hamburger_content {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  gap: 1rem;
+  position: absolute;
+  right: 5rem;
+  top: 5rem;
+  transform: translateX(63%);
+  background-color: rgb(35, 31, 31);
+  animation-duration: 0.6s;
+  animation-name: slidein;
+}
+@keyframes slidein {
+  from {
+    transform: translateX(83%);
+  }
+
+  to {
+    transform: translateX(63%);
+  }
+}
+
+.hamburger_content > li {
+  padding: 1.5rem 2.5rem;
+}
+.hamburger_cta {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-brand--2);
+}
+
+@media screen and (max-width: 780px) {
+  .nav_content {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .hamburger_content {
+    display: flex;
+  }
+}
+@media screen and (max-width: 280px) {
+  .hamburger {
+    height: 3rem;
+    width: 3rem;
+    margin-bottom: 8px;
+  }
 }
 
 .nav a:link,

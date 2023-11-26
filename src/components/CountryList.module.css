@@ -6,3 +6,15 @@
   /* align-items: center; */
   justify-content: space-between;
 }
+@media screen and (max-width: 720px) {
+  .countryList {
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    overflow: scroll;
+    position: absolute;
+    bottom: 10rem;
+    left: 1rem;
+  }
+}

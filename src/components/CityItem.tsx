@@ -34,12 +34,17 @@ export default function CityItem({ city }: any) {
         }`}
         to={`${id}?lat=${lat}&lng=${lng}`}
       >
-        <span className={styles.emoji}>{emoji}</span>
-        <h3 className={styles.name}>{cityName}</h3>
-        <p className={styles.date}>{dateFormat(date)}</p>
-        <button className={styles.deleteBtn} onClick={handleDeleteBtn}>
-          &times;
-        </button>
+        <span className={styles.flex}>
+          <span className={styles.emoji}>{emoji}</span>
+          <h3 className={styles.name}>{cityName}</h3>
+        </span>
+
+        <span className={styles.flex}>
+          <p className={styles.date}>{dateFormat(date)}</p>
+          <button className={styles.deleteBtn} onClick={handleDeleteBtn}>
+            &times;
+          </button>
+        </span>
       </Link>
     </li>
   );

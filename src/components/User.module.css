@@ -37,3 +37,15 @@
   font-size: 1.2rem;
   font-weight: 600;
 }
+@media screen and (max-width: 600px) {
+  .logout-card {
+    margin-top: 2.3rem;
+  }
+  .logout-card > h4 {
+    display: none;
+  }
+  .logout-card > figure {
+    /* width: 3rem; */
+    height: 3.5rem;
+  }
+}

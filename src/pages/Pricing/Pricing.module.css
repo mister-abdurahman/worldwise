@@ -5,11 +5,11 @@
   background-color: var(--color-dark--1);
 }
 
-.pricing section {
+/* .pricing section {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .pricing main {
   display: flex;
@@ -42,4 +42,41 @@
 }
 .pricing main div p {
   font-size: 2rem;
+}
+
+@media screen and (max-width: 940px) {
+  .pricing > main {
+    gap: 1rem;
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+  .pricing main div {
+    margin-top: 4rem;
+  }
+  .pricing main div h1 {
+    font-size: 3rem;
+  }
+  .pricing main div p {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 580px) {
+  .pricing {
+    padding: 2rem;
+  }
+  .pricing main {
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+  }
+  .pricing main figure {
+    margin: 0;
+    margin-top: 0.6rem;
+  }
+  .pricing main figure img {
+    padding: 3.5rem;
+  }
+  .pricing main div {
+    margin-top: 1rem;
+  }
 }

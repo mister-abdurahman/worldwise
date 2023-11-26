@@ -3,3 +3,13 @@
   flex-direction: column;
   gap: 1.2rem;
 }
+@media screen and (max-width: 720px) {
+  .cityList {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    overflow: scroll;
+    position: absolute;
+    top: 14rem;
+    left: 1rem;
+  }
+}
